@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular
   selector: '[appBetterHighlight]'
 })
 export class BetterHighlightDirective implements OnInit {
-  // listens to an event that's defined in the dom
+  // listens to an event that's defined in the dom mouseenter and mouseleave are two events supported byt the dom element that this directive sits on
   @HostListener('mouseenter') mouseover(eventData: Event){
     this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue')
 
